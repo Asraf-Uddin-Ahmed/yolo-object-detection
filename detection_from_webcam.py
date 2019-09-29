@@ -27,9 +27,6 @@ while True:
 
     # Detecting objects
     blob = cv2.dnn.blobFromImage(frame, 0.00392, (320, 320), (0, 0, 0), True, crop=False)
-    # for b in blob:
-    #     for n, img_blob in enumerate(b):
-    #         cv2.imshow(str(n), img_blob)
     net.setInput(blob)
     outs = net.forward(output_layers)
 
